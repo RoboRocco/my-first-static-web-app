@@ -1,31 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login Page</title>
+    <title>Hermida Enterprise Solutions Secure Logon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .login-button {
+            font-size: 24px;
+            padding: 20px 40px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-button:hover {
+            background-color: #2980b9;
+        }
+
+        .redirect-message {
+            display: none;
+            margin-top: 20%;
+            font-size: 20px;
+        }
+
+        .fade-in {
+            animation: fadeIn 1s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>HTUSA CORPORATE SECURITY</h1>
-    <form id="loginForm">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br>
-        <button type="button" id="loginButton">Login</button>
-    </form>
+    <button class="login-button" id="loginButton">Login</button>
+
+    <div class="redirect-message">
+        <p>...Loading Omega V3...</p>
+    </div>
 
     <script>
         document.getElementById("loginButton").addEventListener("click", function() {
-            // In a real-world scenario, you'd send the username and password to a server for authentication.
-            // For this example, we'll simulate a successful login by checking a hard-coded value.
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
+            // Add the fade-in class to the login button for animation.
+            document.querySelector(".login-button").classList.add("fade-in");
 
-            if (username === "your_username" && password === "your_password") {
-                // Replace 'https://example.com' with the URL you want to redirect to after successful login.
-                window.location.href = 'https://example.com';
-            } else {
-                alert("Login failed. Please check your credentials.");
-            }
+            // Hide the login button and display the redirect message.
+            document.querySelector(".login-button").style.display = "none";
+            document.querySelector(".redirect-message").style.display = "block";
+
+            // Replace 'https://example.com' with the URL you want to redirect to after clicking the button.
+            setTimeout(function() {
+                window.location.href = 'https://https://omegav3hub.godaddysites.com/omega-v3-beta';
+            }, 1500); // Redirect after a delay (1.5 seconds in this example).
         });
     </script>
 </body>
