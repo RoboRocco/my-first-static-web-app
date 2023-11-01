@@ -36,51 +36,37 @@
     <style>
     /* Existing styles */
 
-    /* Add these styles for the service boxes */
-    .service-box {
-        border: 2px solid #35495e;
-        border-radius: 10px;
-        padding: 15px;
-        margin: 20px 0;
-        background-color: #fff;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+    
 
-    .service-box h4 {
-        color: #35495e;
-        font-size: 24px;
-        margin-top: 0;
-    }
-
-    .service-box p {
-        font-size: 18px;
-    }
-</style>
-
+      
+<html>
+<head>
+    <title>Login Page</title>
 </head>
 <body>
-   
-    <div class="container">
-        <h2>Welcome to Hermida Enterprise Solutions</h2>
-        <p>We provide expert technology solutions for businesses, including Mobile Device Management (MDM)
-<div class="container">
-    <h2>Welcome to Hermida Enterprise Solutions</h2>
-    <p>We provide expert technology solutions for businesses, including Mobile Device Management (MDM) support, business management consulting, website hosting, and technology consulting. Our mission is to help your business thrive in the digital age.</p>
-    <p>Contact us to learn more about how we can assist your organization in achieving its tech goals.</p>
+    <h1>Hermida Enterprise Group</h1>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <button type="button" id="loginButton">Login</button>
+    </form>
 
-    <h3>Our Services</h3>
-    <div class="service-box">
-        <h4>htusa+</h4>
-        <p>Discover our advanced htusa+ solution, tailored to meet your specific business needs.</p>
-    </div>
+    <script>
+        document.getElementById("loginButton").addEventListener("click", function() {
+            // In a real-world scenario, you'd send the username and password to a server for authentication.
+            // For this example, we'll simulate a successful login by checking a hard-coded value.
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
 
-    <div class="service-box">
-        <h4>htusa Core</h4>
-        <p>Explore the core features of htusa that form the foundation of our technology solutions.</p>
-    </div>
-
-    <div class="service-box">
-        <h4>Omega V3</h4>
-        <p>Unlock the potential of Omega V3 for enhanced technology performance and consulting.</p>
-    </div>
-</div>
+            if (username === "your_username" && password === "your_password") {
+                // Replace 'https://example.com' with the URL you want to redirect to after successful login.
+                window.location.href = 'https://example.com';
+            } else {
+                alert("Login failed. Please check your credentials.");
+            }
+        });
+    </script>
+</body>
+</html>
